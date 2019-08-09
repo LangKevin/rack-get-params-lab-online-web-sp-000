@@ -19,9 +19,9 @@ class Application
       search_term = req.params["item"]
         if @@items.include?(search_term)
           @@cart << search_term
-          response.write "added #{search_term}"
+          resp.write "added #{search_term}"
         else
-           response.write "Couldn't find #{search_term}"
+           resp.write "Couldn't find #{search_term}"
         end
     elsif req.path.match(/search/)
       search_term = req.params["q"]
