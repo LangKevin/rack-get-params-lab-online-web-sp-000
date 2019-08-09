@@ -13,6 +13,7 @@ class Application
       else
         @@items.each do |item|
           resp.write "#{item}\n"
+        end
       end
     elsif req.path.match(/add/)
       search_term = request.params["item"]
