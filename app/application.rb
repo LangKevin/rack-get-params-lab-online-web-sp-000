@@ -5,7 +5,7 @@ class Application
   def call(env)
     resp = Rack::Response.new
     req = Rack::Request.new(env)
-    
+
     if req.path.match(/items/)
       @@items.each do |item|
         resp.write "#{item}\n"
@@ -31,7 +31,7 @@ class Application
     #    end
     #  else
     #    response.write "Couldn't find #{search_term}"
-    #  end   
+    #  end
     resp.finish
   end
 
